@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+	<title>Calculator</title>
+	<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+	<link rel="stylesheet" href="style.css" />
+	
+</head>
+	
+<body>
+	<div id="main_wrapper">
+		<header>
+			<div class="calc_title">
+				<img src="logo.png" alt="Keen Force Logo" id="logo" />
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="calculator.html">Calculator</a></li>
+					<li><a href="foods.html">Foods</a></li>
+					<li><a href="exercises.html">Exercise</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<li><a href="aboutUs.html">About us</a></li>
+				</ul>
+			</nav>
+		</header>
+		</div>
+		<div class="jumbotron">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#" data-toggle="tab" id="selectedImperial">Imperial System</a></li>
+				<li><a href="#" data-toggle="tab" id="selectedMetric">Metric System</a></li>
+			</ul>
+			<div class="container-fluid" style="padding-bottom: 25px;">
+				<div class="row">
+					<form class="col-xs-offset-2 col-xs-5 form-horizontal calculator" role="form">
+						<div class="form-group row">
+							<label class="control-label col-xs-offset-1 col-xs-3">Choose your gender</label>
+							<div class="col-xs-offset-1 col-xs-6">
+								<label class="radio-inline"><input type="radio" name="gender" id="radio1">I'm a male</label>
+								<label class="radio-inline"><input type="radio" name="gender">I'm a female</label>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="control-label col-xs-offset-1 col-xs-3" for="age">Enter your age</label>
+							<div class="col-xs-offset-1 col-xs-6">
+								<input type="text" class="form-control" id="age" placeholder="years">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="control-label col-xs-offset-1 col-xs-3" for="weight">Enter your weight</label>
+							<div class="col-xs-offset-1 col-xs-6">
+								<input type="text" class="form-control" id="weight" placeholder="lb">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="control-label col-xs-offset-1 col-xs-3" for="heightInput">Enter your height</label>
+							<div class="col-xs-offset-1 col-xs-3">
+								<input type="text" class="form-control" id="heightInput" placeholder="ft">
+							</div>
+							<div class="col-xs-3">
+								<input type="text" class="form-control" id="InHeightInput" placeholder="in">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-xs-offset-1 col-xs-10" for="slider"><span id="weightGoal"></span>  is the amount of pounds you would like to lose per week</label>
+							<div class="col-xs-offset-1 col-xs-10">
+								<div id="slider"></div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<button type="button" id="btnCalculate" class="btn btn-default">Calculate</button>
+						</div>
+					</form>
+					<div class="col-xs-5">
+						 <img src="/pics/calculator/choosing-the-right-food.jpg" height="290px"> 
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="well well-sm hidden" id="boxCalculateResults"></div>
+				<p>Basal Metabolic Rate</p>
+				<div id="PanelInfoThree" class="well well-sm collapse in no-transition">
+					<div class="table-responsive">
+						<table class="table">
+							<th>Category of Weight</th>
+							<th>Body Mass Index</th>
+							
+							<tr>
+								<td>Underweight</td> <td>Below 18.5</td>
+							</tr>
+
+							<tr>
+								<td>Normal Weight</td> <td>18.5 - 24.9</td>
+							</tr>
+
+							<tr>
+								<td>Overweight</td> <td>25 - 29.9</td>
+							</tr>
+							
+							<tr>
+								<td>Obese</td> <td>BMI of 30 or greater</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+		<script src="/js/calculator.js"></script>
+	</body>
+</html>
